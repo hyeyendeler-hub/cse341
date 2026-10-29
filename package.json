@@ -4,16 +4,22 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node --watch server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hyeyendeler-hub/cse341.git"
   },
   "keywords": [],
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/hyeyendeler-hub/cse341/issues"
   },
-  "homepage": "https://github.com/hyeyendeler-hub/cse341#readme"
+  "homepage": "https://github.com/hyeyendeler-hub/cse341#readme",
+  "dependencies": {
+    "dotenv": "^18.0.9",
+    "express": "^5.3.0",
+    "mongodb": "^7.7.0"
+  }
 }
