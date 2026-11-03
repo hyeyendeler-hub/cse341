@@ -1,3 +1,4 @@
+
 import { getAllBooks, getBookById } from '../models/books.js';
 
 const getAllBooksHandler = async (req, res) => {
@@ -15,13 +16,13 @@ const getBookByIdHandler = async (req, res) => {
     const book = await getBookById(req.params.id);
 
     if (!book) {
-      return res.status(404).json({ error: 'Book not found' });
+      return res.status(404).json({ message: 'Book not found' });
     }
 
     res.status(200).json(book);
   } catch (error) {
     console.error('Error retrieving book:', error.message);
-    res.status(500).json({ error: 'Internal server error' });
+    res.status(500).json({ message: 'Internal server error' });
   }
 };
 
