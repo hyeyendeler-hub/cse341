@@ -26,6 +26,20 @@ const swaggerOptions = {
             name: { type: 'string', example: 'Maya Rivera' },
             birthYear: { type: 'integer', example: 1990 }
           }
+        },
+        Book: {
+          type: 'object',
+          required: ['id', 'title', 'authorId', 'publicationDate'],
+          properties: {
+            id: { type: 'string', example: 'b1' },
+            title: { type: 'string', example: 'Patterns of Light' },
+            authorId: { type: 'string', example: 'a1' },
+            publicationDate: {
+              type: 'string',
+              format: 'date',
+              example: '2021-08-17'
+            }
+          }
         }
       }
     }
